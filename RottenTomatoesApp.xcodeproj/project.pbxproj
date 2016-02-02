@@ -20,6 +20,9 @@
 		7B832CCC1C5FDF9400F5D2B2 /* MovieCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B832CCB1C5FDF9400F5D2B2 /* MovieCollectionView.m */; };
 		7B832CCF1C5FE1E500F5D2B2 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B832CCE1C5FE1E500F5D2B2 /* MovieCollectionViewCell.m */; };
 		7B832CD51C60046000F5D2B2 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B832CD41C60046000F5D2B2 /* MovieDetailViewController.m */; };
+		7B832CDC1C610DB100F5D2B2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B832CDB1C610DB100F5D2B2 /* MapKit.framework */; };
+		7B832CDE1C6127B900F5D2B2 /* Toronto.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7B832CDD1C6127B900F5D2B2 /* Toronto.gpx */; };
+		7B832CE11C61502900F5D2B2 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B832CE01C61502900F5D2B2 /* Theatre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,10 @@
 		7B832CCE1C5FE1E500F5D2B2 /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		7B832CD31C60046000F5D2B2 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		7B832CD41C60046000F5D2B2 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
+		7B832CDB1C610DB100F5D2B2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7B832CDD1C6127B900F5D2B2 /* Toronto.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Toronto.gpx; sourceTree = "<group>"; };
+		7B832CDF1C61502900F5D2B2 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		7B832CE01C61502900F5D2B2 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B832CDC1C610DB100F5D2B2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,7 @@
 		7B832C851C5FD16000F5D2B2 = {
 			isa = PBXGroup;
 			children = (
+				7B832CDB1C610DB100F5D2B2 /* MapKit.framework */,
 				7B832C901C5FD16100F5D2B2 /* RottenTomatoesApp */,
 				7B832CAD1C5FD16100F5D2B2 /* RottenTomatoesAppTests */,
 				7B832CB81C5FD16100F5D2B2 /* RottenTomatoesAppUITests */,
@@ -115,6 +124,7 @@
 		7B832C901C5FD16100F5D2B2 /* RottenTomatoesApp */ = {
 			isa = PBXGroup;
 			children = (
+				7B832CDD1C6127B900F5D2B2 /* Toronto.gpx */,
 				7B832C941C5FD16100F5D2B2 /* AppDelegate.h */,
 				7B832C951C5FD16100F5D2B2 /* AppDelegate.m */,
 				7B832C971C5FD16100F5D2B2 /* ViewController.h */,
@@ -133,6 +143,8 @@
 				7B832CCE1C5FE1E500F5D2B2 /* MovieCollectionViewCell.m */,
 				7B832CD31C60046000F5D2B2 /* MovieDetailViewController.h */,
 				7B832CD41C60046000F5D2B2 /* MovieDetailViewController.m */,
+				7B832CDF1C61502900F5D2B2 /* Theatre.h */,
+				7B832CE01C61502900F5D2B2 /* Theatre.m */,
 			);
 			path = RottenTomatoesApp;
 			sourceTree = "<group>";
@@ -231,6 +243,11 @@
 					7B832C8D1C5FD16000F5D2B2 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = FVCASQ8A8B;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7B832CA91C5FD16100F5D2B2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -270,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B832CA41C5FD16100F5D2B2 /* LaunchScreen.storyboard in Resources */,
+				7B832CDE1C6127B900F5D2B2 /* Toronto.gpx in Resources */,
 				7B832CA11C5FD16100F5D2B2 /* Assets.xcassets in Resources */,
 				7B832C9C1C5FD16100F5D2B2 /* Main.storyboard in Resources */,
 			);
@@ -302,6 +320,7 @@
 				7B832CC91C5FD66000F5D2B2 /* Movie.m in Sources */,
 				7B832C931C5FD16100F5D2B2 /* main.m in Sources */,
 				7B832C9F1C5FD16100F5D2B2 /* RottenTomatoesApp.xcdatamodeld in Sources */,
+				7B832CE11C61502900F5D2B2 /* Theatre.m in Sources */,
 				7B832CCC1C5FDF9400F5D2B2 /* MovieCollectionView.m in Sources */,
 				7B832CCF1C5FE1E500F5D2B2 /* MovieCollectionViewCell.m in Sources */,
 			);
