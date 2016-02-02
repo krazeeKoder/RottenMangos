@@ -48,7 +48,7 @@
                      movie.title = movieDictionary[@"title"];
                      movie.imageUrl = [NSURL URLWithString:movieDictionary[@"posters"][@"thumbnail"]];
                      NSString *reviewsLink = [movieDictionary[@"links"][@"reviews"] stringByAppendingString:@"?apikey=xe4xau69pxaah5tmuryvrw75"];
-                     movie.reviewURL = [NSURL URLWithString:reviewsLink];
+                     movie.reviewURL = [NSURL URLWithString:[@"http:" stringByAppendingString:reviewsLink]];
                      movie.imageData = [[NSData alloc] initWithContentsOfURL: movie.imageUrl];
                      [movieList addObject:movie];
                  }
