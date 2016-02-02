@@ -41,6 +41,9 @@
 -(void)viewDidLoad {
     NSLog(@"I loaded");
     
+
+    
+    
     self.theatres = [[NSMutableArray alloc] init];
     self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.mapView.delegate = self;
@@ -76,6 +79,9 @@
 
 
 
+}
+-(void) closeMap: (id) sender {
+    [self.mapView removeFromSuperview];
 }
 
 -(void) getReviewData {
@@ -200,6 +206,11 @@
     }
     [self.view addSubview:self.mapView];
     self.mapView.showsUserLocation = YES;
+    UIToolbar *mapToolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    UIBarButtonItem *mapReturnButton = [[UIBarButtonItem alloc] initWithTitle:@"return" style:UIBarButtonItemStylePlain target:self action:@selector(closeMap:)];
+    NSArray *mapButtonItem = [[NSArray alloc] initWithObjects:mapReturnButton, nil];
+    [mapToolBar setItems:mapButtonItem];
+    [self.mapView addSubview:mapToolBar];
     [self getTheaterLocationData];
     //[self.mapView addAnnotation:(nonnull id<MKAnnotation>)]
     
